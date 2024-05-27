@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
-    email: 'test2@gmail.com',
-    password: 'Password1234!'
+    email: process.env.CONDUIT_EMAIL,
+    password: process.env.CONDUIT_PASSWORD
   },
   e2e: {
     setupNodeEvents(on, config) {
