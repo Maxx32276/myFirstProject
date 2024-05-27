@@ -10,11 +10,12 @@
 7. После второго теста создайте хук afterEach и в теле его функции впишите команду, которая почистит куки после каждого теста
 */
 /// <reference types="cypress" />
+import { developerUrl } from "./urls";
 
 describe("Testing JavaScript MDN", () => {
   //beforeEach hook
   beforeEach(() => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript");
+    cy.visit(developerUrl);
   })
   //   it
   it('Open local', () => {

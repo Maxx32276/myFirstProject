@@ -5,9 +5,10 @@
 3. Используя команду select(), выберете версию 3.1.0.
 */
 /// <reference types="cypress" />
+import { ibmUrl } from "./urls";
 describe("Dropdown", () => {
   it("Dropdown lists", () => {
-    cy.visit('https://www.ibm.com/docs/en/zos/2.2.0?topic=instances-select-categories-page');
+    cy.visit(ibmUrl);
     cy.get('#toc-version-selector').select('3.1.0')
   });
 });

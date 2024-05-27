@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('loginConduit', () => {
+    const email = Cypress.env('email');
+    const password = Cypress.env('password');
+
+    cy.visit('https://conduit.mate.academy/user/login');
+    cy.get(':nth-child(1) > .form-control').type(email);
+    cy.get(':nth-child(2) > .form-control').type(password);
+    cy.get('.btn').click();
+});

@@ -1,15 +1,16 @@
 ///<reference types="cypress"/>
+import { metroUrl } from "./urls";
 
 //Неявные утверждения
 
 describe('Testing Sofia metro', () => { //Сообщает название набора моих тестов
     it('Visit Sofia metro', () => {
-        cy.visit("https://www.metrosofia.com/bg")
+        cy.visit(metroUrl)
         cy.contains('EN').click()
     });
 
     it('Sofia Metro assertions examples', () => {
-        cy.visit("https://www.metrosofia.com/en")
+        cy.visit(metroUrl)
         cy.get('.control > .button').should('contain', 'Find Route')
         .should('have.class', 'button is-primary')
         .should('have.length', 1)
@@ -17,14 +18,14 @@ describe('Testing Sofia metro', () => { //Сообщает название на
     });
 
     it('Sofia metro - find type', () => {
-        cy.visit("https://www.metrosofia.com/en")
+        cy.visit(metroUrl)
         cy.get('.control > .button').invoke('attr', 'type')
         .should('equal', 'submit')
 
     });
 
     it('Sofia metro - using and', () => {
-        cy.visit("https://www.metrosofia.com/en")
+        cy.visit(metroUrl)
         cy.get('.control > .button').invoke('attr', 'type')
         .and('equal', 'submit')
         

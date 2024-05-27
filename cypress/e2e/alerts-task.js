@@ -8,9 +8,10 @@
 5. * В рамках блока it, но после блока cy.on напишите команду, которая сделает скриншот теста.
 */
 /// <reference types="cypress" />
+import { rediffUrl } from "./urls";
 describe('Alert', () => {
   it('Test', () => {
-    cy.visit('https://register.rediff.com/register/register.php')
+    cy.visit(rediffUrl)
     cy.get('#Register.submitbtn').click()
   
   cy.on("window:alert", (alert) => {

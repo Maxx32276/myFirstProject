@@ -14,20 +14,21 @@
 */
 
 /// <reference types="cypress" />
+import { developerUrl } from "./urls";
 
 describe("Testing JavaScript MDN", () => {
   it("Visit JavaScript MDN", () => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+    cy.visit(developerUrl)
     cy.contains('English').click()
   });
 
   it("JavaScript MDN assertions", () => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+    cy.visit(developerUrl)
     cy.get('#languages-switcher-button > .button-wrap').should('contain', 'English')
 
   });
   it('Class button', () => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+    cy.visit(developerUrl)
     cy.get('.a11y-nav').should('exist')
     .find('li')
     .should('have.length', 3)

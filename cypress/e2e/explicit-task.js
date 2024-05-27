@@ -12,10 +12,11 @@
 (Подсказка - нужно использовать явное утверждение)
 */
 /// <reference types="cypress" />
+import { developerUrl } from "./urls";
 
 describe("Testing JavaScript MDN", () => {
   it("JavaScript MDN explicit assertions", () => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+    cy.visit(developerUrl)
     cy.get('#languages-switcher-button > .button-wrap').then((language) => {
       const btn = language.text()
       expect(btn).to.contain('English')
@@ -23,7 +24,7 @@ describe("Testing JavaScript MDN", () => {
   });
 
   it("JavaScript MDN explicit assertions", () => {
-    cy.visit("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+    cy.visit(developerUrl)
     cy.get('.a11y-nav')
     .find('li')
     .should((li) => {

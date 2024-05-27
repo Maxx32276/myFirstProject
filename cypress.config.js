@@ -1,7 +1,10 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  //video: true,
+  env: {
+    email: 'test2@gmail.com',
+    password: 'Password1234!'
+  },
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here

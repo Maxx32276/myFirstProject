@@ -1,7 +1,8 @@
 ///<reference types="cypress"/>
+import { wikiUrl } from "./urls"
 
 it("Wikipedia", () => {
-cy.visit("https://ru.wikipedia.org")
+cy.visit(wikiUrl)
 cy.get('#searchInput').click().type("Украина{enter}")
 
 })

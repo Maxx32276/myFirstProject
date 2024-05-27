@@ -8,9 +8,10 @@
 */
 
 /// <reference types="cypress" />
+import { muiUrl } from './urls.js';
 describe('Autocomplete', () => {
     it('Autocomplete in site', () => {
-        cy.visit('https://mui.com/material-ui/react-autocomplete/')
+        cy.visit(muiUrl)
         cy.get('#combo-box-demo').type('12')
     });
 });

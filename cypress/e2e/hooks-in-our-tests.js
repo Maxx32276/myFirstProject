@@ -1,8 +1,9 @@
 ///<reference types="cypress"/>
+import { metroUrl } from "./urls";
 
 describe('Testing Sofia metro', () => {
     beforeEach(function(){
-        cy.visit("https://www.metrosofia.com/en") 
+        cy.visit(metroUrl) 
     })
     it('Sofia Metro assertions examples', () => {
         cy.get('.control > .button').should('contain', 'Find Route')
