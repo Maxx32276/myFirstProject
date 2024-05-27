@@ -1,7 +1,7 @@
 Follow the steps below to get the project up and running:
 
 
-1.Clone the repository by running the 'git clone command https://github.com/Maxx32276/myFirstProject'
+1.Clone the repository by running the 'git clone https://github.com/Maxx32276/myFirstProject'
 
 2.Make sure the VPN is connected and active.
 
